@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,td,tr{
+            margin: 5px;
+            padding: 20px;
+            border: 1px solid;
+            text-align: center;
+        }
+        .row{
+            border: none;
+            background-color: white;
+        }
+        .bg{
+            background-color: black;
+            color: white;
+        }
+        .color{
+            background-color: blue;
+            color: black;
+        }
+        .different{
+            background-color: black;
+            color: white;
+        }
+        .point{
+            background-color: aqua;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <H1>Class Component Lifecycle.</H1>
+    <table>
+        <tr class="bg">
+            <td>Mounting</td>
+            <td>Updating</td>
+            <td>Unmounting</td>
+        </tr>
+        <tr class="color">
+            <td colspan="2">staticgetDerivedFromProps</td>
+            <!-- <td></td> -->
+            <!-- <td></td> -->
+        </tr>
+        <tr class="color">
+            <td class="row"></td>
+            <td>shouldComponentUpdate</td>
+        </tr>
+        <tr class="color">
+            <td colspan="2">render</td>
+        </tr>
+        <tr class="color">
+            <td class="row"></td>
+            <td>get SNAPSHOT before update</td>
+        </tr>
+        <tr class="color">
+            <td>ComponentDidMount</td>
+            <td>ComponentWillUpdate</td>
+            <td>CompopnentWillUnmounnt</td>
+        </tr>
+
+    </table>
+    <p>In React, components have a lifecycle that consists of different phases. Each phase has a set of lifecycle methods that are called at specific points in the<i> component's lifecycle.</i> These methods allow you to control the component's behavior and perform specific actions at different stages of its lifecycle.
+        A <u>component's lifecycle</u>. has three main phases:<b> the Mounting Phase, the Updating Phase, and the Unmounting Phase.</b></p>
+
+        <table >
+            <tr class="different">
+                <td>FUNCTION COMPONENT</td>
+                <TD>CLASS COMPONENT</TD>
+            </tr>
+            <tr class="point">
+                <td><b>Functional components use a function with a return statement to render</b></td>
+                <td><b> class components use render().Function components use hooks, class components use React lifecycle methods.</b></td>
+            </tr>
+            <tr class="point">
+                <td><b>Uses React Hooks to manage state</b></td>
+                <td><b>Has built-in state management using this.state</b></td>
+            </tr>
+            <tr class="point">
+                <td><b>Uses React Hooks to handle lifecycle events like useState, useEffect, useMemo.</b></td>
+                <td><b>Uses class lifecycle methods like componentDidMount, componentDidUpdate, and componentWillUnmount</b></td>
+            </tr>
+            <tr class="point">
+                <td><b>Props are passed as a parameter to the function</b></td>
+                <td><b>Props are accessed through this.props</b></td>
+            </tr>
+        </table>
+</body>
+</html>
